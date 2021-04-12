@@ -1,0 +1,10 @@
+<h1><%=@studio.name%></h1>
+<p><%=@studio.location%></p>
+
+<h2><%=" Movies Made by #{@studio.name}"%> </h2>
+
+<section>
+  <%@movies.each do |movie| %>
+  <%= movie.title %>
+  <%end%>
+</section>
