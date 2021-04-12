@@ -10,6 +10,7 @@ RSpec.describe 'Movies show ' do
     @alan = Actor.create(name: 'Alan Rickmane',age: 60, currently_working: false)
     @rupert = Actor.create(name: 'Rupert Grint',age: 32, currently_working: true)
     @gal = Actor.create(name: 'Gal Gadot',age: 44, currently_working: true)
+    @emma = Actor.create(name: 'Emma Watson',age: 32, currently_working: true)
 
     MovieCredit.create(actor_id: @daniel.id, movie_id: @harrypotter.id)
     MovieCredit.create(actor_id: @alan.id, movie_id: @harrypotter.id)
@@ -33,4 +34,19 @@ RSpec.describe 'Movies show ' do
     expect(page).to have_content(@rupert.name)
     expect(page).to_not have_content(@gal.name)
   end
+
+  it "Add an Actor to A Movie" do
+    expect(page).to_not have_content(@emma.name)
+
+    fill_in :actor_id, with: "#{@emma.id}"
+    click_button "Add Actor"
+
+    expect(current_path).to eq("/movies/#{@harrypotter.id}")
+    expect(page).to have_content(@emma.name)
+    expect(page).to have_content(@daniel.name)
+    expect(page).to have_content(@alan.name)
+    expect(page).to have_content(@rupert.name)
+    expect(page).to_not have_content(@gal.name)
+  end
+
 end

@@ -6,3 +6,11 @@
   <% @actors.each do |actor| %>
   <p><%= actor.name %></p>
   <%end%>
+
+  <div>
+    <%= form_with url: "/movies/#{@movie.id}", method: :post, local: true do |f| %>
+      <%= f.label "Actor Name:"%>
+      <%=f.text_field :actor_id, required: true%>
+      <%= f.submit "Add Actor"%>
+      <%end%>
+    </div>
