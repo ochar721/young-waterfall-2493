@@ -34,9 +34,9 @@ Once the time for the assessment is up, push your code to your fork and create a
 * You do not need to test for or create any model validations.
 
 ## Overview
- 
+
 We are creating an application to track studios, movies, and actors
- 
+
 * Studios have a name and location
     * ex. name: 'Universal Studios', location: 'Hollywood'
 * Movies have a title, creation year, and genre
@@ -47,20 +47,20 @@ We are creating an application to track studios, movies, and actors
 * Movies belong to a Studio
 * Movies have many Actors
 * Actors can be in many Movies
- 
+
 Some of the initial migrations and model set up has been done for you. After you set up your database, you should be able to run the tests and see two passing tests.
- 
+
 ## User Stories
- 
+ <!-- 
 ```
 Story 1
 Studio Show
- 
+
 As a user,
 When I visit a studio show page
 I see the studio's name and location
 And I see the titles of all of its movies
-```
+``` -->
 
 ```
 Story 2
@@ -73,21 +73,21 @@ And I see that the list of actors is unique (no duplicate actors)
 And I see that the list of actors is ordered from oldest actor to youngest
 And I see that the list of actors only includes actors that are currently working
 ```
- 
+
 ```
 Story 3
 Movie Show
- 
+
 As a user,
 When I visit a movie's show page.
 I see the movie's title, creation year, and genre,
 and I see all of the actors in the movie
 ```
- 
+
 ```
 Story 4
 Add an Actor to a Movie
- 
+
 As a user,
 When I visit a movie show page,
 I do not see any actors listed that are not part of the movie
@@ -99,20 +99,15 @@ And I see the actor's name is now listed
 
 (You do not have to test for any sad path, for example if the name submitted does not match an existing actor)
 ```
- 
+
 ## Extension
- 
+
 ```
 Extension
 Coactors
- 
+
 As a user,
 When I visit an actor's show page
-I see that actors name and age 
+I see that actors name and age
 And I see a unique list of all of the actors this particular actor has worked with.
 ```
- 
- 
- 
- 
-
