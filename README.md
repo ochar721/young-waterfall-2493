@@ -51,7 +51,7 @@ We are creating an application to track studios, movies, and actors
 Some of the initial migrations and model set up has been done for you. After you set up your database, you should be able to run the tests and see two passing tests.
 
 ## User Stories
- <!--
+ 
 ```
 Story 1
 Studio Show
@@ -60,7 +60,7 @@ As a user,
 When I visit a studio show page
 I see the studio's name and location
 And I see the titles of all of its movies
-``` -->
+```
 
 ```
 Story 2
@@ -74,7 +74,7 @@ And I see that the list of actors is ordered from oldest actor to youngest
 And I see that the list of actors only includes actors that are currently working
 ```
 
-<!-- ```
+```
 Story 3
 Movie Show
 
@@ -82,7 +82,7 @@ As a user,
 When I visit a movie's show page.
 I see the movie's title, creation year, and genre,
 and I see all of the actors in the movie
-``` -->
+```
 
 ```
 Story 4
